@@ -2,14 +2,13 @@ import React from "react";
 import { Fragment } from "react/cjs/react.production.min";
 import MeetupDetail from "../../components/meetups/MeetupDetail";
 
-function MeetupDetails(props) {
+function MeetupDetails() {
   return (
     <MeetupDetail
-      // image="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/1280px-Stadtbild_M%C3%BCnchen.jpg"
-      // title="Test first meetup"
-      // description="Test description"
-      // address="51, Iwaya Road"
-      data={props.meetupData}
+      image="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/1280px-Stadtbild_M%C3%BCnchen.jpg"
+      title="Test first meetup"
+      description="Test description"
+      address="51, Iwaya Road"
     />
   );
 }
