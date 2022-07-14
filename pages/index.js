@@ -1,13 +1,52 @@
 import MeetupList from "../components/meetups/MeetupList";
 
-function HomePage() {
-  const DUMMY_MEETUPS = [
-    {
-      id: "m1",
-      title: "first meetup",
+const DUMMY_MEETUPS = [
+  {
+    id: "m1",
+    title: "First meetup",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/1280px-Stadtbild_M%C3%BCnchen.jpg",
+    address: "this place 51, 345 this city",
+    description: "This is a first meetup",
+  },
+  {
+    id: "m2",
+    title: "Second meetup",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/1280px-Stadtbild_M%C3%BCnchen.jpg",
+    address: "this place 51, 345 this city",
+    description: "This is a second meetup",
+  },
+  {
+    id: "m3",
+    title: "Third meetup",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/1280px-Stadtbild_M%C3%BCnchen.jpg",
+    address: "this place 51, 345 this city",
+    description: "This is a third meetup",
+  },
+];
+
+function HomePage(props) {
+  return <MeetupList meetups={props.meetups} />;
+}
+
+// export function getServerSideProps(context) {
+//   const req = context.req;
+//   const res = context.res;
+//   return {
+//     props: {
+//       meetups: DUMMY_MEETUPS,
+//     },
+//   };
+// }
+
+export function getStaticProps() {
+  return {
+    props: {
+      meetups: DUMMY_MEETUPS,
     },
-  ];
-  return <MeetupList meetups={DUMMY_MEETUPS} />;
+  };
 }
 
 export default HomePage;
