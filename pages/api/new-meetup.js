@@ -1,25 +1,25 @@
-// //api/new-meetup
+//api/new-meetup
 
-// import { MongoClient } from "mongodb";
+import { MongoClient } from "mongodb";
 
-// async function handler(req, res) {
-//   if (req.method === "POST") {
-//     const data = req.body;
+async function handler(req, res) {
+  if (req.method === "POST") {
+    const data = req.body;
 
-//     const client = await MongoClient.connect(
-//       "mongodb+srv://noah-ife:Traversy@123@cluster0.z45dp.mongodb.net/?retryWrites=true&w=majority"
-//     );
-//     const db = client.db();
+    const client = await MongoClient.connect(
+      "mongodb+srv://noah-ife:olamide@cluster0.z45dp.mongodb.net/?retryWrites=true&w=majority"
+    );
+    const db = client.db();
 
-//     const meetupsCollection = db.collection("meetups");
-//     const result = await meetupsCollection.insertOne(data);
+    const meetupsCollection = db.collection("meetups");
+    const result = await meetupsCollection.insertOne(data);
 
-//     console.log(result);
+    console.log(result);
 
-//     client.close();
+    client.close();
 
-//     res.status(201).json({ message: "Meetup added" });
-//   }
-// }
+    res.status(201).json({ message: "Meetup added" });
+  }
+}
 
-// export default handler;
+export default handler;
