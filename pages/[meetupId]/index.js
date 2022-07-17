@@ -2,6 +2,7 @@ import React from "react";
 import { Fragment } from "react/cjs/react.production.min";
 import MeetupDetail from "../../components/meetups/MeetupDetail";
 import { MongoClient, ObjectId } from "mongodb";
+import Head from "next/head";
 
 function MeetupDetails(props) {
   return (
