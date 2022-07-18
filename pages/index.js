@@ -13,7 +13,7 @@ function HomePage(props) {
           content="Browse a list of active React Meetups"
         />
       </Head>
-      <MeetupList meetups={props.meetups} />;
+      <MeetupList meetups={props.meetups} />
     </Fragment>
   );
 }
@@ -48,6 +48,7 @@ export async function getStaticProps() {
         image: meetup.image,
         id: meetup._id.toString(),
       })),
+      revalidate: 1,
     },
   };
 }
